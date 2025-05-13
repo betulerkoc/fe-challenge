@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MenuItem } from '../../types';
+import SlideContent from '../SlideContent';
 
 interface SlideMenuProps {
   items: MenuItem[];
@@ -12,7 +13,7 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ items, defaultActiveIndex = 0 }) 
   return (
     <div className="w-full">
       <div className="mb-8 px-4">
-       {/* content */}
+        <SlideContent slide={items[activeIndex]} />
       </div>
 
       <div className="w-full overflow-x-auto scrollbar-hide">
@@ -21,9 +22,9 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ items, defaultActiveIndex = 0 }) 
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={"flex flex-col items-center justify-center w-[301px] h-[124px] border border-gray-200 transition-all duration-200"}
+              className={"flex flex-row items-center justify-center w-[301px] h-[124px] border border-gray-200 transition-all duration-200"}
             >
-              <div className="w-12 h-12 mb-2 flex items-center justify-center text-gray-600">
+              <div className="w-12 h-12 flex items-center justify-center text-gray-600">
                 {item.icon}
               </div>
               <div className="text-center">
