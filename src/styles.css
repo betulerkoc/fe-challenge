@@ -3,3 +3,54 @@
 body {
   display: block;
 }
+@keyframes circleFill {
+  0% {
+    stroke-dashoffset: 172.8;
+  }
+  25% {
+    stroke-dashoffset: 129.6;
+  }
+  50% {
+    stroke-dashoffset: 86.4;
+  }
+  75% {
+    stroke-dashoffset: 43.2;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.progress-ring {
+  stroke-dasharray: 172.8;
+  stroke-dashoffset: 172.8;
+  animation: circleFill 2s ease-out forwards;
+}
+
+
+.document-scanner_svg__progress-ring {
+  stroke-dasharray: 172.8;
+  stroke-dashoffset: 172.8;
+}
+
+.animate-circle-fill .document-scanner_svg__progress-ring {
+  animation: circleFill 1s ease-out forwards;
+}
+
+
+.advanced-filter_svg__progress-ring {
+  stroke-dasharray: 172.8;
+  stroke-dashoffset: 172.8;
+}
+
+.advanced-filter_svg__progress-ring {
+  animation: circleFill 1s ease-out forwards;
+}
+
+
+
+@keyframes circleFill {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

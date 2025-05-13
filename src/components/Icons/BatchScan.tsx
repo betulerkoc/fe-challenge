@@ -23,7 +23,8 @@ const SvgBatchScan = (
       cy={28}
       r={27.5}
       stroke="currentColor"
-      strokeOpacity={0.08}
+      strokeLinecap="round"
+      className="batch-scan_svg__progress-ring"
     />
     <path
       fill="currentColor"

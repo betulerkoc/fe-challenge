@@ -23,7 +23,8 @@ const SvgExport = (
       cy={28}
       r={27.5}
       stroke="currentColor"
-      strokeOpacity={0.08}
+      strokeLinecap="round"
+      className="export_svg__progress-ring"
     />
     <g fill="currentColor" clipPath="url(#export_svg__a)">
       <path d="m36.848 19.469-4.989-4.989v4.989z" />
