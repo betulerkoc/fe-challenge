@@ -22,13 +22,18 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ items, defaultActiveIndex = 0 }) 
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={"flex flex-row items-center justify-center w-[301px] h-[124px] border border-gray-200 transition-all duration-200"}
+              className={`flex items-center space-x-4 min-w-[301px] h-[124px] border border-gray-200 transition-all duration-200 px-6 ${activeIndex === index ? 'bg-[#0381FF08] border-blue-200' : 'hover:bg-gray-50'
+                }`}
             >
-              <div className="w-12 h-12 flex items-center justify-center text-gray-600">
+              <div
+                className={`w-12 h-12 flex items-center justify-center transition-colors duration-500 ${activeIndex === index ? 'text-blue-600' : 'text-gray-400'
+                  }`}
+              >
                 {item.icon}
               </div>
-              <div className="text-center">
-                <div className={`text-xl font-medium ${activeIndex === index ? 'text-blue-600' : 'text-gray-700'}`}>
+
+              <div className="text-left flex-1">
+                <div className="text-xl font-medium">
                   {item.title}
                 </div>
               </div>
