@@ -22,13 +22,24 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ items, defaultActiveIndex = 0 }) 
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={"flex flex-row items-center justify-center w-[301px] h-[124px] border border-gray-200 transition-all duration-200"}
+              className={`flex items-center space-x-4 min-w-[301px] h-[124px] border border-gray-200 transition-all duration-200 px-6 ${activeIndex === index ? 'bg-[#0381FF08] border-[#0381FF]' : 'hover:bg-gray-50'
+                }`}
             >
-              <div className="w-12 h-12 flex items-center justify-center text-gray-600">
-                {item.icon}
+              <div
+                className={`w-12 h-12 flex items-center justify-center ${activeIndex === index
+                    ? 'text-[#0381FF] animate-circle-fill'
+                    : 'text-gray-400'
+                  }`}
+              >
+                {React.cloneElement(item.icon as JSX.Element, {
+                  className: 'w-full h-full',
+                })}
               </div>
-              <div className="text-center">
-                <div className={`text-xl font-medium ${activeIndex === index ? 'text-blue-600' : 'text-gray-700'}`}>
+
+
+
+              <div className="text-left flex-1">
+                <div className="text-xl font-medium">
                   {item.title}
                 </div>
               </div>

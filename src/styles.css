@@ -3,3 +3,23 @@
 body {
   display: block;
 }
+
+[class*="_svg__progress-ring"] {
+  stroke-dasharray: 172.8;
+  stroke-dashoffset: -172.8;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.animate-circle-fill [class*="_svg__progress-ring"] {
+  animation: circleFill 1s ease-out forwards;
+}
+
+@keyframes circleFill {
+  from {
+    stroke-dashoffset: -172.8;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
