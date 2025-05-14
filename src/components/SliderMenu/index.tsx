@@ -29,7 +29,7 @@ const SlideMenu: React.FC<SlideMenuProps> = ({
 
   return (
     <div className={`w-full relative ${className}`.trim()}>
-      <div className="relative top-14 lg:top-18">
+      <div className="relative top-14 lg:top-18 h-[560px]">
         <div className="flex-1">
           <SlideContent
             slide={items[activeIndex]}
