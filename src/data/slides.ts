@@ -1,10 +1,10 @@
 import React from 'react';
 import { DocumentScanner, SignAndStamp, BatchScan, AdvancedFilter, Export } from "../components/Icons";
-import documentScannerImg from '../assets/documentScanner.jpg';
-import signatureAndStampImg from '../assets/signatureAndStamp.jpg';
-import batchScanImg from '../assets/batchScan.jpg';
-import advancedFiltersImg from '../assets/advancedFilters.jpg';
-import exportAndShareImg from '../assets/exportAndShare.jpg';
+import documentScannerImg from '../assets/images/documentScanner.jpg';
+import signatureAndStampImg from '../assets/images/signatureAndStamp.jpg';
+import batchScanImg from '../assets/images/batchScan.jpg';
+import advancedFiltersImg from '../assets/images/advancedFilters.jpg';
+import exportAndShareImg from '../assets/images/exportAndShare.jpg';
 
 export interface Slide {
     title: string;

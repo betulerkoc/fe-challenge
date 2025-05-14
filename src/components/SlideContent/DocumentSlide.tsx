@@ -7,7 +7,7 @@ interface DocumentSlideProps {
 }
 
 export const DocumentSlide: React.FC<DocumentSlideProps> = ({ slide, animate = false }) => (
-  <div className="w-[284px]">
+  <div className="w-[230.14px] lg:w-[365.58px]">
     <img
       src={slide.image}
       alt={slide.title}
