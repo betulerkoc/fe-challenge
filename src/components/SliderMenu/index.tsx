@@ -10,11 +10,11 @@ interface SlideMenuProps {
   onSlideChange?: (index: number) => void;
 }
 
-const SlideMenu: React.FC<SlideMenuProps> = ({ 
-  items, 
+const SlideMenu: React.FC<SlideMenuProps> = ({
+  items,
   defaultActiveIndex = 0,
   className = '',
-  onSlideChange 
+  onSlideChange
 }) => {
   const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
 
@@ -29,16 +29,16 @@ const SlideMenu: React.FC<SlideMenuProps> = ({
 
   return (
     <div className={`w-full relative ${className}`.trim()}>
-      <div className="relative mb-8 px-4">
+      <div className="relative top-14 lg:top-18">
         <div className="flex-1">
-          <SlideContent 
-            slide={items[activeIndex]} 
+          <SlideContent
+            slide={items[activeIndex]}
             activeIndex={activeIndex}
           />
         </div>
       </div>
 
-      <div className="w-full overflow-x-auto scrollbar-hide relative z-10">
+      <div className="w-full overflow-x-auto top-14 lg:top-18 scrollbar-hide relative z-10">
         <div className="flex">
           {items.map((item, index) => (
             <SliderButton
