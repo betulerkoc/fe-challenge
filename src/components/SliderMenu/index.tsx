@@ -1,17 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { MenuItem } from '../../types';
 import SlideContent from '../SlideContent';
+import SliderButton from '../SliderButton';
 
 interface SlideMenuProps {
   items: MenuItem[];
   defaultActiveIndex?: number;
+  className?: string;
+  onSlideChange?: (index: number) => void;
 }
 
-const SlideMenu: React.FC<SlideMenuProps> = ({ items, defaultActiveIndex = 0 }) => {
+const SlideMenu: React.FC<SlideMenuProps> = ({ 
+  items, 
+  defaultActiveIndex = 0,
+  className = '',
+  onSlideChange 
+}) => {
   const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
 
+  const handleSlideChange = useCallback((index: number) => {
+    setActiveIndex(index);
+    onSlideChange?.(index);
+  }, [onSlideChange]);
+
+  if (!items.length) {
+    return null;
+  }
+
   return (
-    <div className="w-full relative">
+    <div className={`w-full relative ${className}`.trim()}>
       <div className="relative mb-8 px-4">
         <div className="flex-1">
           <SlideContent 
@@ -22,33 +39,14 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ items, defaultActiveIndex = 0 }) 
       </div>
 
       <div className="w-full overflow-x-auto scrollbar-hide relative z-10">
-        <div className="flex px-4">
+        <div className="flex">
           {items.map((item, index) => (
-            <button
+            <SliderButton
               key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`flex items-center space-x-4 min-w-[301px] h-[124px] border border-gray-200 transition-all duration-200 px-6 ${
-                activeIndex === index ? 'bg-[#0381FF08] border-[#0381FF]' : 'hover:bg-gray-50'
-              }`}
-            >
-              <div
-                className={`w-12 h-12 flex items-center justify-center ${
-                  activeIndex === index
-                    ? 'text-[#0381FF] animate-circle-fill'
-                    : 'text-gray-400'
-                }`}
-              >
-                {React.cloneElement(item.icon as JSX.Element, {
-                  className: 'w-full h-full',
-                })}
-              </div>
-
-              <div className="text-left flex-1">
-                <div className="text-xl font-medium">
-                  {item.title}
-                </div>
-              </div>
-            </button>
+              item={item}
+              isActive={activeIndex === index}
+              onClick={() => handleSlideChange(index)}
+            />
           ))}
         </div>
       </div>
