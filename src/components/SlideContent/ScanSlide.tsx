@@ -14,27 +14,37 @@ export const ScanSlide: React.FC<ScanSlideProps> = ({ slide }) => (
       <img
         src={slide.image}
         alt={slide.title}
-        className={`w-full slide-up-animation`}
+        className="w-full"
       />
     </div>
 
     <div className="absolute inset-0 flex items-center justify-center">
-      <img
-        src={scanFile1}
-        alt={`Scan File 1`}
-        className={`w-[250px] animate-[slideUp_3s_ease-out_1000ms_forwards]`}
-      />
-      <img
-        src={scanFile2}
-        alt={`Scan File 2`}
-        className={`w-[250px] animate-[slideUp_3s_ease-out_2000ms_forwards]`}
-      />
-      <img
-        src={scanFile3}
-        alt={`Scan File 3`}
-        className={`w-[250px] animate-[slideUp_3s_ease-out_3000ms_forwards]`}
-      />
+      <div className="relative m-auto h-[400px] w-full flex items-center justify-center">
+        <img
+          src={scanFile1}
+          alt="Scan File 1"
+          className="absolute w-[165px] h-auto max-h-[350px] object-contain
+                  shadow-xl rounded-sm left-1/2 -translate-x-1/2 -translate-y-1
+                  animate-[stackSlide_0.5s_ease-out_1s_forwards] 
+                  opacity-0"
+        />
+        <img
+          src={scanFile2}
+          alt="Scan File 2"
+          className="absolute w-[182px] h-auto max-h-[350px] object-contain
+                  shadow-xl rounded-sm left-1/2 -translate-x-1/2 translate-y-3
+                  animate-[stackSlide_0.5s_ease-out_2s_forwards] 
+                  opacity-0"
+        />
+        <img
+          src={scanFile3}
+          alt="Scan File 3"
+          className="absolute w-[193px] h-auto max-h-[350px] object-contain
+                   shadow-xl rounded-sm left-1/2 -translate-x-1/2 translate-y-6
+                  animate-[stackSlide_0.5s_ease-out_3s_forwards] 
+                  opacity-0"
+        />
+      </div>
     </div>
-
   </div>
-); 
+);
