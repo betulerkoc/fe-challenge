@@ -1,8 +1,8 @@
 import React from 'react';
 import { MenuItem } from '../../types';
-import scanFile1 from '../../assets/scanFile1.jpg';
-import scanFile2 from '../../assets/scanFile2.jpg';
-import scanFile3 from '../../assets/scanFile3.jpg';
+import scanFile1 from '../../assets/images/scanFile1.jpg';
+import scanFile2 from '../../assets/images/scanFile2.jpg';
+import scanFile3 from '../../assets/images/scanFile3.jpg';
 
 interface ScanSlideProps {
   slide: MenuItem;

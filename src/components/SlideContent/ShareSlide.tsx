@@ -1,9 +1,9 @@
 import React from 'react';
 import { MenuItem } from '../../types';
-import shareJpgImg from '../../assets/shareJpg.png';
-import sharePdfImg from '../../assets/sharePdf.png';
-import shareTxtImg from '../../assets/shareTxt.png';
-import shareArrowImg from '../../assets/shareArrow.png';
+import shareJpgImg from '../../assets/images/shareJpg.png';
+import sharePdfImg from '../../assets/images/sharePdf.png';
+import shareTxtImg from '../../assets/images/shareTxt.png';
+import shareArrowImg from '../../assets/images/shareArrow.png';
 
 interface ShareSlideProps {
   slide: MenuItem;

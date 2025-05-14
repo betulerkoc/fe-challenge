@@ -1,7 +1,7 @@
 import React from 'react';
 import { MenuItem } from '../../types';
-import signatureImg from '../../assets/signature.jpg';
-import stampImg from '../../assets/stamp.jpg';
+import signatureImg from '../../assets/images/signature.jpg';
+import stampImg from '../../assets/images/stamp.jpg';
 
 interface SignatureSlideProps {
   slide: MenuItem;

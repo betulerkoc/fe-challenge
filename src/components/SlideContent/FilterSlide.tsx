@@ -1,7 +1,7 @@
 import React from 'react';
 import { MenuItem } from '../../types';
-import filterLightImg from '../../assets/filterLight.jpg';
-import filterContrastImg from '../../assets/filterContrast.jpg';
+import filterLightImg from '../../assets/images/filterLight.jpg';
+import filterContrastImg from '../../assets/images/filterContrast.jpg';
 
 interface FilterSlideProps {
   slide: MenuItem;
