@@ -20,14 +20,14 @@ export const FilterSlide: React.FC<FilterSlideProps> = ({ slide }) => (
       <img
         src={filterLightImg}
         alt="Light Filter"
-        className="w-[28.35px] lg:w-[42.39px] fade-in-left [animation-delay:2000ms]"
+        className="w-[28.35px] lg:w-[42.39px] opacity-0 [animation:fade-in_0.6s_ease-out_1s_forwards]"
       />
     </div>
     <div className="absolute -right-3 top-18 lg:-right-5 lg:top-27">
       <img
         src={filterContrastImg}
         alt="Contrast Filter"
-        className="w-[28.35px] lg:w-[42.39px] fade-in-right [animation-delay:2000ms]"
+        className="w-[28.35px] lg:w-[42.39px] opacity-0 [animation:fade-in_0.8s_ease-out_1.2s_forwards]"
       />
     </div>
   </div>
