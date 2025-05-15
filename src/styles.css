@@ -1,82 +1,86 @@
-@import "tailwindcss";
+@import url("tailwindcss");
 
 body {
   display: block;
 }
 
 [class*="_svg__progress-ring"] {
+  transform-origin: center;
+  transform: rotate(-90deg);
   stroke-dasharray: 172.8;
   stroke-dashoffset: -172.8;
-  transform: rotate(-90deg);
-  transform-origin: center;
 }
 
 .animate-circle-fill [class*="_svg__progress-ring"] {
-  animation: circleFill 1s ease-out forwards;
+  animation: circle-fill 1s ease-out forwards;
 }
 
-@keyframes circleFill {
+@keyframes circle-fill {
   from {
     stroke-dashoffset: -172.8;
   }
+
   to {
     stroke-dashoffset: 0;
   }
 }
 
-@keyframes slideUp {
+@keyframes slide-up {
   0% {
-    opacity: 0;
     transform: translateY(400px);
+    opacity: 0;
   }
+
   100% {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
-@keyframes fadeInLeft {
+@keyframes fade-in-left {
   from {
-    opacity: 0;
     transform: translateX(-20px);
+    opacity: 0;
   }
+
   to {
-    opacity: 1;
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
-@keyframes fadeInRight {
+@keyframes fade-in-right {
   from {
-    opacity: 0;
     transform: translateX(20px);
+    opacity: 0;
   }
+
   to {
-    opacity: 1;
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 .slide-up-animation {
-  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .fade-in-left {
-  animation: fadeInLeft 0.8s ease-out forwards;
+  animation: fade-in-left 0.8s ease-out forwards;
 }
 
 .fade-in-right {
-  animation: fadeInRight 0.8s ease-out forwards;
+  animation: fade-in-right 0.8s ease-out forwards;
 }
 
-
-@keyframes stackSlide {
+@keyframes stack-slide {
   0% {
-    opacity: 0;
     transform: translateY(40px) scale(0.95);
+    opacity: 0;
   }
+
   100% {
-    opacity: 1;
     transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }

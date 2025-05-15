@@ -23,22 +23,22 @@ export const ShareSlide: React.FC<ShareSlideProps> = ({ slide }) => (
       <img
         src={shareArrowImg}
         alt={'Share'}
-        className="w-[23.24px] object-contain opacity-0 -mr-2 mt-12 animate-[slideUp_0.8s_ease-out_1000ms_forwards]"
+        className="w-[23.24px] object-contain opacity-0 -mr-2 mt-12 [animation:slide-up_0.8s_ease-out_1s_forwards]"
       />
       <img
         src={sharePdfImg}
         alt={'Share PDF'}
-        className="w-[72.1px] object-contain opacity-0 mx-1 animate-[slideUp_0.8s_ease-out_1250ms_forwards] lg:w-[110px]"
+        className="w-[72.1px] object-contain opacity-0 mx-1 [animation:slide-up_0.8s_ease-out_1.25s_forwards] lg:w-[110px]"
       />
       <img
         src={shareJpgImg}
         alt={'Share JPG'}
-        className="w-[71.8px] object-contain opacity-0 mb-12 animate-[slideUp_0.8s_ease-out_1500ms_forwards] lg:w-[96px]"
+        className="w-[71.8px] object-contain opacity-0 mb-12 [animation:slide-up_0.8s_ease-out_1.5s_forwards] lg:w-[96px]"
       />
       <img
         src={shareTxtImg}
         alt={'Share TXT'}
-        className="w-[72.5px] object-contain opacity-0 mx-3 animate-[slideUp_0.8s_ease-out_1750ms_forwards] lg:w-[110px]"
+        className="w-[72.5px] object-contain opacity-0 mx-3 [animation:slide-up_0.8s_ease-out_1.75s_forwards] lg:w-[110px]"
       />
     </div>
   </div>
