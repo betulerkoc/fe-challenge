@@ -20,14 +20,14 @@ export const SignatureSlide: React.FC<SignatureSlideProps> = ({ slide }) => (
       <img
         src={signatureImg}
         alt="Signature"
-        className="w-[142.18px] lg:w-[217.37px] fade-in-left"
+        className="w-[142.18px] lg:w-[217.37px] opacity-0 [animation:fade-in_0.8s_ease-out_1000ms_forwards]"
       />
     </div>
     <div className="absolute -right-12 top-24 lg:top-36 lg:-right-20">
       <img
         src={stampImg}
         alt="Stamp"
-        className="w-[141.68px] lg:w-[216.62px] fade-in-right"
+        className="w-[141.68px] lg:w-[216.62px] opacity-0 [animation:fade-in_0.8s_ease-out_1500ms_forwards]"
       />
     </div>
   </div>

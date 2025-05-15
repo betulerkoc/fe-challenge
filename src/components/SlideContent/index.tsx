@@ -31,7 +31,7 @@ const SlideContent: React.FC<SlideContentProps> = ({ slide, activeIndex }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center lg:flex-row-reverse">
+    <div className="flex flex-col justify-evenly items-center lg:flex-row-reverse">
       <SlideDescription slide={slide} />
       <div className="lg:mr-20 flex items-center justify-center relative">
         {renderSlideContent()}

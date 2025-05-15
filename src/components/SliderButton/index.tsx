@@ -25,9 +25,9 @@ const SliderButton: React.FC<SliderButtonProps> = ({ item, isActive, onClick }) 
     </div>
 
     <div className="text-left flex-1">
-      <div className="text-xl font-medium">
+      <p className="font-inter font-normal text-[19px] leading-[26px] tracking-[0px]">
         {item.title}
-      </div>
+      </p>
     </div>
   </button>
 );

@@ -19,27 +19,29 @@ export const ShareSlide: React.FC<ShareSlideProps> = ({ slide }) => (
       />
     </div>
 
-    <div className="absolute inset-x-0 bottom-5 flex justify-center items-center">
-      <img
-        src={shareArrowImg}
-        alt={'Share'}
-        className="w-[23.24px] object-contain opacity-0 -mr-2 mt-12 animate-[slideUp_0.8s_ease-out_1000ms_forwards]"
-      />
-      <img
-        src={sharePdfImg}
-        alt={'Share PDF'}
-        className="w-[72.1px] object-contain opacity-0 mx-1 animate-[slideUp_0.8s_ease-out_1250ms_forwards] lg:w-[110px]"
-      />
-      <img
-        src={shareJpgImg}
-        alt={'Share JPG'}
-        className="w-[71.8px] object-contain opacity-0 mb-12 animate-[slideUp_0.8s_ease-out_1500ms_forwards] lg:w-[96px]"
-      />
-      <img
-        src={shareTxtImg}
-        alt={'Share TXT'}
-        className="w-[72.5px] object-contain opacity-0 mx-3 animate-[slideUp_0.8s_ease-out_1750ms_forwards] lg:w-[110px]"
-      />
+    <div className="absolute inset-x-0 bottom-5 lg:bottom-10">
+      <div className="flex items-center justify-center">
+        <img
+          src={shareArrowImg}
+          alt={'Share'}
+          className="w-[23.24px] object-contain opacity-0 mt-16 lg:mt-22 lg:scale-[1] [animation:slide-up_0.8s_ease-out_1s_forwards]"
+        />
+        <img
+          src={sharePdfImg}
+          alt={'Share PDF'}
+          className="w-[72.1px] object-contain opacity-0 mx-1 lg:scale-[2.2] lg:mr-10 lg:ml-3 [animation:slide-up_0.8s_ease-out_1.25s_forwards]"
+        />
+        <img
+          src={shareJpgImg}
+          alt={'Share JPG'}
+          className="w-[71.8px] object-contain opacity-0 mb-12 lg:scale-[2] lg:mb-16 lg:mx-10 [animation:slide-up_0.8s_ease-out_1.5s_forwards]"
+        />
+        <img
+          src={shareTxtImg}
+          alt={'Share TXT'}
+          className="w-[72.5px] object-contain opacity-0 mx-1 lg:scale-[2.2] lg:mx-10 [animation:slide-up_0.8s_ease-out_1.75s_forwards]"
+        />
+      </div>
     </div>
   </div>
 ); 
