@@ -11,7 +11,7 @@ interface ShareSlideProps {
 
 export const ShareSlide: React.FC<ShareSlideProps> = ({ slide }) => (
   <div className='relative'>
-    <div className="w-[237.22px] lg:w-[365.42px]">
+    <div className="w-[237.22px] lg:w-[365.42px] translate-y-11 lg:translate-y-0">
       <img
         src={slide.image}
         alt={slide.title}

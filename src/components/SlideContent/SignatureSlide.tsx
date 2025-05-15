@@ -9,7 +9,7 @@ interface SignatureSlideProps {
 
 export const SignatureSlide: React.FC<SignatureSlideProps> = ({ slide }) => (
   <div className='relative'>
-    <div className="w-[239.12px] lg:w-[365.58px]">
+    <div className="w-[239.12px] lg:w-[365.58px] -translate-y-2 lg:translate-y-0">
       <img
         src={slide.image}
         alt={slide.title}

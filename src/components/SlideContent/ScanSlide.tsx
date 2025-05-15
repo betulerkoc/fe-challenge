@@ -10,7 +10,7 @@ interface ScanSlideProps {
 
 export const ScanSlide: React.FC<ScanSlideProps> = ({ slide }) => (
   <div className="relative">
-    <div className="w-[250.68px] lg:w-[374.79px]">
+    <div className="w-[250.68px] lg:w-[374.79px] translate-y-2 lg:translate-y-0">
       <img
         src={slide.image}
         alt={slide.title}
