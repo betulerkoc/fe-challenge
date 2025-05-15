@@ -6,18 +6,45 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
 [class*="_svg__progress-ring"] {
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
   transform-origin: center;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   transform: rotate(-90deg);
   stroke-dasharray: 172.8;
   stroke-dashoffset: -172.8;
 }
 
 .animate-circle-fill [class*="_svg__progress-ring"] {
+  -webkit-animation: circle-fill 1s ease-out forwards;
+  -moz-animation: circle-fill 1s ease-out forwards;
   animation: circle-fill 1s ease-out forwards;
+}
+
+@-webkit-keyframes circle-fill {
+  from {
+    stroke-dashoffset: -172.8;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-moz-keyframes circle-fill {
+  from {
+    stroke-dashoffset: -172.8;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes circle-fill {
@@ -30,11 +57,60 @@ body {
   }
 }
 
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
   }
+
   to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(400px);
+    transform: translateY(400px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes slide-up {
+  0% {
+    -moz-transform: translateY(400px);
+    transform: translateY(400px);
+    opacity: 0;
+  }
+
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -52,23 +128,61 @@ body {
 }
 
 .fade-in {
+  -webkit-animation: fade-in 0.8s ease-out forwards;
+  -moz-animation: fade-in 0.8s ease-out forwards;
   animation: fade-in 0.8s ease-out forwards;
 }
 
 .delay-1000 {
+  -webkit-animation-delay: 1000ms;
+  -moz-animation-delay: 1000ms;
   animation-delay: 1000ms;
 }
 
 .delay-1500 {
+  -webkit-animation-delay: 1500ms;
+  -moz-animation-delay: 1500ms;
   animation-delay: 1500ms;
 }
 
 .delay-2000 {
+  -webkit-animation-delay: 2000ms;
+  -moz-animation-delay: 2000ms;
   animation-delay: 2000ms;
 }
 
 .slide-up-animation {
+  -webkit-animation: slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  -moz-animation: slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   animation: slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@-webkit-keyframes stack-slide {
+  0% {
+    -webkit-transform: translateY(40px) scale(0.95);
+    transform: translateY(40px) scale(0.95);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes stack-slide {
+  0% {
+    -moz-transform: translateY(40px) scale(0.95);
+    transform: translateY(40px) scale(0.95);
+    opacity: 0;
+  }
+
+  100% {
+    -moz-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes stack-slide {
@@ -80,5 +194,21 @@ body {
   100% {
     transform: translateY(0) scale(1);
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .fade-in,
+  .slide-up-animation,
+  .animate-circle-fill [class*="_svg__progress-ring"] {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+    will-change: transform, opacity;
   }
 }
