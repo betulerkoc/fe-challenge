@@ -3,10 +3,12 @@
 
 body {
   display: block;
+
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  text-rendering: optimizelegibility;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
 [class*="_svg__progress-ring"] {
@@ -34,6 +36,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -80,5 +83,16 @@ body {
   100% {
     transform: translateY(0) scale(1);
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .slide-up-animation,
+  .animate-circle-fill [class*="_svg__progress-ring"] {
+    will-change: auto;
+    transform: none;
+    opacity: 1;
+    animation: none;
   }
 }
